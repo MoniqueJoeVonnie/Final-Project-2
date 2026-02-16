@@ -13,14 +13,52 @@ nav {
   height: 100px;
   display: flex;
   justify-content: space-between;
+  padding: 0 16px;
+  background-color: rgb(2, 114, 145);
+}
+
+.header {
+  height: calc(100vh - 70px);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body__background {
+  background-image: url("/Assets/jokuhn-music-8980543_1920.jpg");
+  background-size: 800px auto;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 72px;
+  color: white;
+}
+
+p {
+  font-size: 36px;
+  color: white;
+}
+
+.ul {
+  display: flex;
 }
 
 .nav__links {
-  list-style: none;
+  list-style-type: none;
   display: flex;
   gap: 20px;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 16px;
+  padding-left: 16px;
+}
+
+a{
+  color: rgb(0, 255, 238);
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .logo {
@@ -28,3 +66,6 @@ nav {
   width: auto;
   margin-top: -20px;
 }
+
+
+
