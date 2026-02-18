@@ -143,7 +143,7 @@ form {
   display: flex;          
   max-width: 600px;             
   margin: 0 auto;           
-  top: 1160px;
+  top: 1065px;
   gap: 12px;
   opacity: 0.8;
 }
@@ -173,7 +173,7 @@ button {
   top: 50%;           
   right: 20px;        
   transform: translateY(-50%); 
-  margin-top: 850px;
+  margin-top: 750px;
 }
 
 .search__overlay {
@@ -191,22 +191,42 @@ button {
 
 .footer {
   position: relative;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0)), url("/Assets/flutie8211-grunge-8673797_1280.jpg");
-  background-size: cover;
+  background:
+  linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0)),
+  url("/Assets/flutie8211-grunge-8673797_1280.jpg");
   background-position: center;
-  color: #060606;             
-  padding: 60px 20px;
+  color: #ffffff; 
+  padding: 50px 20px;
   text-align: center;
-  overflow: hidden;
+  background-size: 45%;
+  height: 55px;
   z-index: 3;
-  bottom: -955px;
+  margin-top: 1155px;
 }
 
 
 .footer__logo-img {
-  height: 100px;
+  height: 75px;
   width: auto;
-  margin-bottom: 16px;
+  margin-top: -55px;
+  margin-bottom: 15px;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: -40px;
+  margin-bottom: 10px;
+}
+
+.footer__link {
+  font-size: 12px; 
+}
+
+p {
+    font-size: 9px;
+    color: white;
 }
 
 
