@@ -318,6 +318,18 @@ Hero Section Styles
         top: -30px;
         height: 105%;
     }
+
+/*
+
+Search Section Styles
+
+*/
+
+#search {
+    width: 90%;
+    margin: 0 auto;
+  }
+
 }
 
 
@@ -398,6 +410,20 @@ Hero Section Styles
         top: -25px;
         height: 104%;
     }
+
+
+ /*
+
+Search Section Styles
+
+*/
+
+#search {
+    width: 95%;
+    flex-direction: column;   /* stack elements if needed */
+    gap: 10px;
+  }
+
 
 }
 
@@ -482,6 +508,18 @@ Hero Section Styles
         top: -20px;
         height: 103%;
     }
+
+/*
+
+Search Section Styles
+
+*/
+
+  #search {
+    width: 100%;
+    gap: 8px;
+  }
+
 }
 
 
@@ -565,6 +603,18 @@ Hero Section Styles
         top: -15px;
         height: 102%;
     }
+
+    /*
+
+Search Section Styles
+
+*/
+
+    #search {
+    width: 100%;
+    gap: 6px;
+  }
+  
 }
 
 
