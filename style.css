@@ -18,13 +18,13 @@ nav {
 }
 
 .container {
-  max-width: 350px;
-  margin-left: -780px;
-  margin-bottom: -175px;
-  padding-left: 16px;
-  align-items: center; 
-  justify-content: center;
-  min-height: 100vh;
+  width: 32%;
+  max-width: 1200px;
+  min-width: 320px; /* prevents layout collapse on very small screens */
+  margin-left: 0;
+  margin-right: auto;
+   margin-top: -250px; /* adjust value as needed */
+  padding: 0 16px;
 }
 
 .ul {
@@ -68,7 +68,6 @@ a{
 }
 
 
-
 /*
 
 Hero Section Styles
@@ -86,23 +85,6 @@ Hero Section Styles
   position: relative;
   height: 100vh;
   overflow: hidden;
-}
-
-.video-container {
-  position: relative; 
-  width: 100%;
-  height: 100%;
-}
-
-.hero-video {
-  position: absolute;
-  top: 65;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.2;
 }
 
 .header {
@@ -215,7 +197,9 @@ button {
   background-position: center;
   color: #ffffff; 
   padding: 50px 20px;
-  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
   background-size: 45%;
   height: 55px;
   z-index: 3;
@@ -227,7 +211,7 @@ button {
   height: 75px;
   width: auto;
   margin-top: -55px;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .footer__links {
@@ -246,6 +230,351 @@ p {
     font-size: 9px;
     color: rgb(225, 255, 0);
 }
+
+
+
+
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+
+@media (max-width: 768px) {
+
+   nav {
+    height: 60px;          /* slightly shorter */
+    padding: 0 12px;       /* tighter spacing */
+  }
+
+  .container {
+    width: 60%;
+    margin-top: -120px;  /* reduce the offset */
+    padding: 0 16px;
+  }
+  
+   .ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px; /* adds spacing between items */
+  }
+
+  .nav__links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-right: 0;
+    padding-left: 0;
+    padding-top: 24px; 
+  }
+
+    a {
+    font-size: 18px; /* slightly smaller for tablet screens */
+    font-weight: 500; /* keep weight the same or adjust if needed */
+    color: rgb(255, 3, 3); /* keep color same */
+    text-decoration: none; /* unchanged */
+  }
+
+   .logo {
+    height: 115px;
+    margin-top: -20px;
+  }
+
+   .row {
+    padding: 18px;
+    max-width: 1100px;
+  }
+
+/*
+
+Hero Section Styles
+
+*/
+
+#hero {
+    background-attachment: scroll; /* fixed can cause issues on tablets */
+  }
+
+  .hero {
+    height: 90vh; /* slightly shorter for tablets */
+  }
+
+  .header {
+    height: calc(90vh - 60px); /* slightly shorter */
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  .subheader {
+    font-size: 22px;
+    margin: 14px 0;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  p {
+    font-size: 32px;
+  }
+
+  .overlay {
+        top: -30px;
+        height: 105%;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 640px) {
+  nav {
+    height: 55px;      /* slightly shorter */
+    padding: 0 10px;   /* reduce horizontal padding */
+  }
+
+   .container {
+    width: 75%;          /* slightly wider for smaller screens */
+    margin-top: -100px;  /* reduce offset for better layout */
+    padding: 0 14px;     
+  }
+
+  .ul {
+    gap: 10px; /* slightly smaller spacing */
+  }
+
+  .nav__links {
+    gap: 10px;
+    padding-top: 20px;
+  }
+
+  a {
+    font-size: 17px;
+  }
+
+   .logo {
+    height: 100px;
+    margin-top: -15px;
+  }
+
+  .row {
+    padding: 16px;
+    max-width: 900px;
+  }
+
+/*
+
+Hero Section Styles
+
+*/
+
+#hero {
+    background-attachment: scroll;
+  }
+
+  .hero {
+    height: 80vh; /* reduce height for smaller screens */
+  }
+
+  .header {
+    height: calc(85vh - 50px);
+    padding: 18px;
+    margin-top: 25px;
+  }
+
+  .subheader {
+    font-size: 20px;
+    margin: 12px 0;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+   p {
+    font-size: 28px;
+  }
+
+  .overlay {
+        top: -25px;
+        height: 104%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 550px) {
+ nav {
+    height: 50px;
+    padding: 0 8px;
+  }
+
+   .container {
+    width: 85%;          /* almost full width */
+    margin-top: -80px;   
+    padding: 0 12px;     
+  }
+
+  .ul {
+    gap: 8px; /* further reduce spacing */
+  }
+
+   .nav__links {
+    gap: 8px;
+    padding-top: 16px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  .logo {
+    height: 90px;
+    margin-top: -10px;
+  }
+
+  .row {
+    padding: 14px;
+    max-width: 750px;
+  }
+
+/*
+
+Hero Section Styles
+
+*/
+
+ #hero {
+    background-attachment: scroll;
+  }
+
+  .hero {
+    height: 75vh; /* further reduce height for smaller screens */
+  }
+
+  .header {
+    height: calc(80vh - 45px);
+    padding: 16px;
+    margin-top: 20px;
+  }
+
+   .subheader {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  .overlay {
+        top: -20px;
+        height: 103%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+ nav {
+    height: 45px;
+    padding: 0 6px;
+  }
+
+   .container {
+    width: 95%;          /* nearly full width for small screens */
+    margin-top: -60px;   
+    padding: 0 8px;      
+  }
+
+  .ul {
+    gap: 6px; /* minimal spacing for very small screens */
+  }
+
+  .nav__links {
+    gap: 6px;
+    padding-top: 12px;
+  }
+
+  a {
+    font-size: 15px;
+  }
+
+  .logo {
+    height: 80px;
+    margin-top: -5px;
+  }
+
+  .row {
+    padding: 12px;
+    max-width: 100%;
+  }
+
+/*
+
+Hero Section Styles
+
+*/
+
+ #hero {
+    background-attachment: scroll;
+  }
+
+   .hero {
+    height: 70vh; /* keep it mobile-friendly */
+  }
+
+    .header {
+    height: calc(75vh - 40px);
+    padding: 12px;
+    margin-top: 15px;
+  }
+
+  .subheader {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+
+   h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .overlay {
+        top: -15px;
+        height: 102%;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
