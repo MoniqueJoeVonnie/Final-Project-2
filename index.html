@@ -10,18 +10,52 @@
 <body>
     <section>
         <style>
-            body {
-                background-image: url("/Assets/jokuhn-music-8980543_1920.jpg");
+        body {
+                background-image: image-set(
+                url("/Assets/jokuhn-music-8980543_1920_Resize_460\ x\ 640.jpg") 1x,
+                url("/Assets/jokuhn-music-8980543_1920_Resize_960\ x\ 1280\ .jpg") 2x,
+                url("/Assets/jokuhn-music-8980543_1920_.jpg") 3x
+                );
                 background-size: cover;
-                background-position: center;
                 background-attachment: fixed;
+            }
+
+            /* Tablet and below */
+            @media (max-width: 768px) {
+                body {
+                background-position: center top;
+                }
+            }
+
+            /* 640px */
+            @media (max-width: 640px) {
+                body {
+                background-position: 50% 20%;
+                background-size: cover;
+                }
+            }
+
+            @media (max-width: 550px) {
+            body {
+                background-position: 50% 15%;
+                }
+            }
+
+            /* Small devices */
+            @media (max-width: 480px) {
+                body {
+                /* still uses image-set, but bias positioning for mobile */
+                background-position: 50% 10%;
+                }
             }
         </style>
             <nav>
                 <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-7.png" class="logo" alt="">
+                
+                
                 <ul class="nav__links">
                     <li><a href="about">About</a></li>
-                    <li><a href="search">Search</a></li>
+                    <li><a href="services">Services</a></li>
                     <li><a href="contact">Contact</a></li>
                 </ul>
             </nav>
