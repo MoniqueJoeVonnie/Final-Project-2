@@ -8,13 +8,38 @@
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section>
+    <section class="header">
+  <nav class="nav">
+    
+    <div class="nav__left">
+      <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-3.png" class="logo" alt="">
+    </div>
+
+
+    <div class="nav__center">
+  <h1 class="nav__title">Discover Your Sound</h1>
+
+  <form action="search" method="get">
+    <input type="text" name="query" placeholder="Search by genre, artist, or producer...">
+  </form>
+</div>
+
+    <div class="nav__right">
+      <ul class="nav__links">
+        <li><a href="about">About</a></li>
+        <li><a href="services">Services</a></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+    </div>
+
+  </nav>
+</section>
         <style>
         body {
                 background-image: image-set(
-                url("/Assets/jokuhn-music-8980543_1920_Resize_460\ x\ 640.jpg") 1x,
-                url("/Assets/jokuhn-music-8980543_1920_Resize_960\ x\ 1280\ .jpg") 2x,
-                url("/Assets/jokuhn-music-8980543_1920_.jpg") 3x
+                url("/Assets/Lyrics_640\ x\ 464.jpg") 1x,
+                url("/Assets/Lyrics_1280\ x\ 929.jpeg") 2x,
+                url("/Assets/Lyrics_1920\ x\ 1394.jpeg") 3x
                 );
                 background-size: cover;
                 background-attachment: fixed;
@@ -49,42 +74,13 @@
                 }
             }
         </style>
-            <nav>
-                <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-7.png" class="logo" alt="">
-                
-                
-                <ul class="nav__links">
-                    <li><a href="about">About</a></li>
-                    <li><a href="services">Services</a></li>
-                    <li><a href="contact">Contact</a></li>
-                </ul>
-            </nav>
-    </section>
+            
     <section id="hero" class="hero">
-        <div class="overlay"></div>
-            <header class="header">
-                <div class="row">
-                    <div class="container">
-                        <h1>TAP INTO THE VIBRATION</h1>
-                        <p class="subheader">
-                            Experience the power of music like never before. 
-                            Search for your favorite tracks and discover new sounds 
-                            that resonate with you.
-                        </p>
-                    </div>
-                </div>
-        </header>
-</section> 
-<main>        
-    <section id="search" class="search">
-        <div class="search__overlay"></div>
-        <form action="search" method="get">
-                <input type="text" name="query" placeholder="Search for music...">
-                <button type="submit">Search</button>
-        </form>
-            <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-8.png" class="secondary-logo" alt="">
-    </section>   
+<main> 
+    <div class="row">      
+     
 </main>
+    </section>
 <footer id="footer" class="footer">
     <div class="footer__overlay"></div>
     <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-3.png" class="footer__logo-img" alt="">

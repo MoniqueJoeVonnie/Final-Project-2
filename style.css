@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
 * {
   padding-left: 0;
   margin: 0;
@@ -9,503 +10,132 @@
   font-family: "Roboto", sans-serif;
 }
 
-nav {
-  height: 45px;
+.header {
+  background-image: url("/Assets/eslam-m0-letters-8237667_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nav {
   display: flex;
-  justify-content: space-between;
-  padding: 0 16px;
-  background-color: rgb(255, 255, 255);
-
+  height: 200px;
+  padding: 16px 16px 0 16px;              /* top + side padding */
 }
 
-.container {
-  width: 30%;
-  max-width: 1200px;
-  min-width: 310px; /* prevents layout collapse on very small screens */
-  margin-left: 0;
-  margin-right: auto;
-   margin-top: -250px; /* adjust value as needed */
-  padding: 0 16px;
-}
 
-.ul {
+
+
+.nav__left {
+  flex: 1;
   display: flex;
-}
-
-.nav__links {
-  list-style-type: none;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  margin-right: 16px;
-  padding-left: 16px;
-}
-
-
-a{
-  color: rgb(255, 3, 3);
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
+  align-items: flex-start;    /* pushes logo higher */
 }
 
 .logo {
   height: 95px;
   width: auto;
-  margin-top: -19px;
-  align-items: center;
 }
 
-.row {
+
+
+
+.nav__center {
+  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-  max-width: 1300px;
-  margin: 0 auto;
+  flex-direction: column;   /* stack title + form */
+  align-items: center;      /* center horizontally */
+  justify-content: flex-end; /* keep them lower in header */
+  padding-bottom: 24px;
+  text-align: center;
 }
 
-
-/*
-
-Hero Section Styles
-
-*/
-
-
-#hero {
-  background-size: contain;
-  background-position: center;
-  background-attachment: fixed;
-  
-}
-
-.hero {
-  position: relative;
-  height: 55vh;
-  overflow: hidden;
-}
-
-.header {
-  position: relative;
-  z-index: 2;
-  height: calc(100vh - 70px);
-  padding: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -20px;
-}
-
-.subheader {
-  font-size: 14px;
-  color: rgb(255, 255, 255);
-  margin: 16px 0;
-}
-
-h1 {
-  font-size:24px;
-  color: rgb(52, 1, 255);
-}
-
-p {
-  font-size: 36px;
+.nav__title {
   color: white;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;  /* space between title and form */
 }
 
-
-/*
-
-Search Section Styles
-
-*/
-
-#search {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-
-form {
-  position: relative;
-  z-index: 2;
+.nav__center form {
   display: flex;
-  flex-direction: column; /* stack vertically */
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: 0;
-  top: -400px;
   gap: 12px;
-  opacity: 0.8;
+  width: 100%;
+  max-width: 600px;
 }
+
+
+
+
+.nav__right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;    /* pushes links higher */
+}
+
+.nav__links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding-top: 8%;
+}
+
+
+
 
 input[type="text"] {
-  width: 50%;
-  padding: 12px 16px;
+  width: 150%;                 /* not 200% */
+  padding: 5px 16px;
   border-radius: 30px;
   font-size: 20px;
   border: 1px solid rgb(255, 255, 255);
 }
 
-button {
-  width: 20%; /* same as input if you're using % */
-  background-color: rgb(255, 0, 51);
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 24px;
-  cursor: pointer;
-  border-radius: 30px; 
-  
+a {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
 }
 
-.secondary-logo {
-  height: 300px;
-  width: auto;
-  position: absolute;
-  top: -300%;           
-  right: 20px;        
-  transform: translateY(-50%); 
+a:hover {
+  opacity: 0.8;
 }
 
-
-/* 
-
-Footer 
-
-*/
-
-
-.footer {
-  position: relative;
-  background:
-  linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0)),
-  url("/Assets/flutie8211-grunge-8673797_1280.jpg");
-  background-position: center;
-  color: #ffffff; 
-  padding: 50px 20px;
+row {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
   align-items: center;
-  flex-direction: column;
-  display: flex;
-  background-size: 45%;
-  z-index: 3;
-  top: 30px;
-}
-
-
-.footer__logo-img {
-  height: 75px;
-  width: auto;
-  margin-top: -55px;
-  margin-bottom: 17px;
-}
-
-.footer__links {
-  display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: -40px;
-  margin-bottom: 10px;
-}
-
-.footer__link {
-  font-size: 12px; 
-}
-
-p {
-    font-size: 9px;
-    color: rgb(225, 255, 0);
 }
 
 
-
-
-/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
-
-@media (max-width: 768px) {
-
-   nav {
-    height: 60px;          /* slightly shorter */
-    padding: 0 12px;       /* tighter spacing */
-  }
-
-  .container {
-    width: 50%;
-    margin-top: -210px;  /* reduce the offset */
-    padding: 0 16px;
-  }
-  
-   .ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px; /* adds spacing between items */
-  }
-
-  .nav__links {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 12px;
-    margin-right: 0;
-    padding-left: 0;
-    padding-top: 24px; 
-  }
-
-    a {
-    font-size: 18px; /* slightly smaller for tablet screens */
-    font-weight: 500; /* keep weight the same or adjust if needed */
-    color: rgb(255, 3, 3); /* keep color same */
-    text-decoration: none; /* unchanged */
-  }
-
-   .logo {
-    height: 115px;
-    margin-top: -20px;
-  }
-
-   .row {
-    padding: 18px;
-    max-width: 1100px;
-  }
-  
 
 /*
 
-Hero Section Styles
+Main Section Search Music
 
 */
 
-#hero {
-    background-attachment: scroll; /* fixed can cause issues on tablets */
-  }
-
-  .hero {
-    height: 90vh; /* slightly shorter for tablets */
-  }
-
- .header {
-    margin-top: 160px;
-    padding: 20px;
-  }
-
-  .subheader {
-    font-size: 22px;
-    margin: 14px 0;
-  }
-
-  h1 {
-    font-size: 42px;
-  }
-
-  p {
-    font-size: 32px;
-  }
-
-/*
-
-Search Section Styles
-
-*/
-
-#search {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-   form {
-    top: 380px;
-    max-width: 500px;
-    gap: 10px;
-  }
-
-  input[type="text"] {
-    font-size: 18px;
-    padding: 11px 14px;
-  }
-
-   button {
-    font-size: 22px;
-    padding: 8px 14px;
-  }
-
-  .secondary-logo {
-    height: 240px;
-    top: 300%;
-    right: 16px;
-  }
-
-
-  /* 
-
-Footer 
-
-*/
-
-.footer {
-    background-size: 60%;
-    padding: 40px 18px;
-    top: 420px;
-  }
-
-  .footer__logo-img {
-    height: 65px;
-    margin-top: -45px;
-    margin-bottom: 14px;
-  }
-
-  .footer__links {
-    gap: 12px;
-    margin-top: -30px;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-size: 13px;
-  }
-
+body {
+    position: relative;
+    margin: 0;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.85); /* increase for lighter effect */
+    pointer-events: none; /* keeps content clickable */
+    z-index: 0;
+}
 
-
-
-
-
-
-@media (max-width: 640px) {
-
-  nav {
-    height: 55px;      /* slightly shorter */
-    padding: 0 10px;   /* reduce horizontal padding */
-  }
-
-   .container {
-    width: 75%;          /* slightly wider for smaller screens */
-    margin-top: -100px;  /* reduce offset for better layout */
-    padding: 0 14px;     
-  }
-
-  .ul {
-    gap: 10px; /* slightly smaller spacing */
-  }
-
-  .nav__links {
-    gap: 10px;
-    padding-top: 20px;
-  }
-
-  a {
-    font-size: 17px;
-  }
-
-   .logo {
-    height: 100px;
-    margin-top: -15px;
-  }
-
-  .row {
-    padding: 16px;
-    max-width: 900px;
-  }
-
-/*
-
-Hero Section Styles
-
-*/
-
-#hero {
-    background-attachment: scroll;
-  }
-
-  .hero {
-    height: 80vh; /* reduce height for smaller screens */
-  }
-
-  .header {
-    margin-top: 120px;
-    padding: 18px;
-  }
-
-  .subheader {
-    font-size: 20px;
-    margin: 12px 0;
-  }
-
-  h1 {
-    font-size: 36px;
-  }
-
-   p {
-    font-size: 28px;
-  }
-
- /*
-
-Search Section Styles
-
-*/
-
-#search {
-    width: 95%;
-    flex-direction: column;   /* stack elements if needed */
-    gap: 10px;
-  }
-
-   form {
-    top: 300px;
-    max-width: 90%;
-    flex-direction: column;   /* stack input + button */
-    gap: 10px;
-  }
-
-   input[type="text"] {
-    font-size: 17px;
-    padding: 10px 14px;
-  }
-
-  button {
-    font-size: 20px;
-    padding: 8px 14px;
-  }
-
-  .secondary-logo {
-    height: 200px;
-    top: 250%;
-    right: 12px;
-  }
-
- 
-
-/* 
-
-Footer 
-
-*/
-
-.footer {
-    background-size: 75%;
-    padding: 35px 16px;
-    top: 320px;
-  }
-
-  .footer__logo-img {
-    height: 55px;
-    margin-top: -35px;
-    margin-bottom: 12px;
-  }
-
-  .footer__links {
-    gap: 10px;
-    margin-top: -22px;
-    margin-bottom: 8px;
-  }
-
-  p {
-    font-size: 12.5px;
-  }
-
+main, header, section, footer {
+    position: relative;
+    z-index: 1; /* ensures content sits above overlay */
 }
 
 
@@ -517,283 +147,9 @@ Footer
 
 
 
-@media (max-width: 550px) {
 
- nav {
-    height: 50px;
-    padding: 0 8px;
-  }
 
-   .container {
-    width: 85%;          /* almost full width */
-    margin-top: -80px;   
-    padding: 0 12px;     
-  }
 
-  .ul {
-    gap: 8px; /* further reduce spacing */
-  }
-
-   .nav__links {
-    gap: 8px;
-    padding-top: 16px;
-  }
-
-  a {
-    font-size: 16px;
-  }
-
-  .logo {
-    height: 90px;
-    margin-top: -10px;
-  }
-
-  .row {
-    padding: 14px;
-    max-width: 750px;
-  }
-
-/*
-
-Hero Section Styles
-
-*/
-
- #hero {
-    background-attachment: scroll;
-  }
-
-  .hero {
-    height: 75vh; /* further reduce height for smaller screens */
-  }
-
-  .header {
-    margin-top: 60px;
-    padding: 14px;
-  }
-
-   .subheader {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  p {
-    font-size: 24px;
-  }
-
-/*
-
-Search Section Styles
-
-*/
-
-  #search {
-    width: 100%;
-    gap: 8px;
-  }
-
-   form {
-    top: 240px;
-    max-width: 95%;
-    gap: 8px;
-  }
-
-  input[type="text"] {
-    font-size: 16px;
-    padding: 10px 12px;
-  }
-
-  button {
-    font-size: 18px;
-    padding: 7px 12px;
-    border-radius: 26px;
-  }
-
-  .secondary-logo {
-    height: 160px;
-    top: 220%;
-    right: 10px;
-  }
-
-/* 
-
-Footer 
-
-*/
-
-.footer {
-    background-size: 90%;
-    padding: 30px 14px;
-    top: 250px;
-  }
-
-  .footer__logo-img {
-    height: 48px;
-    margin-top: -28px;
-    margin-bottom: 10px;
-  }
-
-  .footer__links {
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    margin-top: -15px;
-    margin-bottom: 6px;
-  }
-
-  p {
-    font-size: 12px;
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 480px) {
-
- nav {
-    height: 45px;
-    padding: 0 6px;
-  }
-
-   .container {
-    width: 95%;          /* nearly full width for small screens */
-    margin-top: -60px;   
-    padding: 0 8px;      
-  }
-
-  .ul {
-    gap: 6px; /* minimal spacing for very small screens */
-  }
-
-  .nav__links {
-    gap: 6px;
-    padding-top: 12px;
-  }
-
-  a {
-    font-size: 15px;
-  }
-
-  .logo {
-    height: 80px;
-    margin-top: -5px;
-  }
-
-  .row {
-    padding: 12px;
-    max-width: 100%;
-  }
-
-/*
-
-Hero Section Styles
-
-*/
-
- #hero {
-    background-attachment: scroll;
-  }
-
-   .hero {
-    height: 70vh; /* keep it mobile-friendly */
-  }
-
-    .header {
-    margin-top: 60px;
-    padding: 14px;
-  }
-
-  .subheader {
-    font-size: 16px;
-    margin: 8px 0;
-  }
-
-   h1 {
-    font-size: 28px;
-  }
-
-  p {
-    font-size: 20px;
-  }
-
-    /*
-
-Search Section Styles
-
-*/
-
-    #search {
-    width: 100%;
-    gap: 6px;
-  }
-
-   form {
-    top: 200px;
-    max-width: 100%;
-    gap: 6px;
-  }
-
-  input[type="text"] {
-    font-size: 15px;
-    padding: 9px 12px;
-    border-radius: 25px; /* slightly smaller curve */
-  }
-
-  button {
-    font-size: 16px;
-    padding: 7px 10px;
-    border-radius: 22px;
-  }
-
-  .secondary-logo {
-    height: 130px;
-    top: 200%;
-    right: 8px;
-  }
-
-/* 
-
-Footer 
-
-*/
-
-.footer {
-    background-size: cover;
-    padding: 25px 12px;
-    top: 200px;
-  }
-
-  .footer__logo-img {
-    height: 42px;
-    margin-top: -22px;
-    margin-bottom: 8px;
-  }
-
-  .footer__links {
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    margin-top: -10px;
-    margin-bottom: 6px;
-  }
-
-  p {
-    font-size: 11.5px;
-  }
-
-}
 
 
 
