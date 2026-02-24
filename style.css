@@ -228,7 +228,7 @@ main, header, section, footer {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-right: 100px;
+  padding-right: 140px;
   margin-top: -200px;
 }
 
@@ -237,8 +237,8 @@ main, header, section, footer {
   font-size: 16px;
   color: #3d46cc;
   text-align: right;
-  width: 250px;   /* match slider width */
-  padding-right: 120px;
+  width: 270px;   /* match slider width */
+  padding-right: 90px;
 }
 
 #priceRange {
