@@ -10,6 +10,13 @@
   font-family: "Roboto", sans-serif;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 .header {
   background-image: url("/Assets/eslam-m0-letters-8237667_1280.jpg");
   background-size: cover;
@@ -114,6 +121,54 @@ a {
   opacity: 1; /* override global hover fade */
 }
 
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+  padding: 12px 45px 12px 16px; /* extra right padding for icon */
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  position: relative;
+  max-width: 600px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #888; /* default icon color */
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.search-btn:hover {
+  color: #ff0033;
+  text-shadow: 0 0 6px rgba(255,0,51,0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.search-input-wrapper:has(input:focus),
+.search-input-wrapper:has(input:not(:placeholder-shown)) .search-btn {
+  color: #ff0033; /* icon color when typing or focused */
+}
+
+.search-input-wrapper input:focus {
+  outline: none;
+  border-color: #ff0033;
+  box-shadow: 0 0 10px rgba(255,0,51,0.3);
+}
+
 row {
   width: 100%;
   max-width: 1300px;
@@ -130,23 +185,64 @@ Main Section Search Music
 
 */
 
-body {
-    position: relative;
-    margin: 0;
-}
+
 
 body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.85); /* increase for lighter effect */
-    pointer-events: none; /* keeps content clickable */
-    z-index: 0;
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85); /* increase for lighter effect */
+  pointer-events: none; /* keeps content clickable */
+  z-index: 0;
 }
 
 main, header, section, footer {
-    position: relative;
-    z-index: 1; /* ensures content sits above overlay */
+  position: relative;
+  z-index: 1; /* ensures content sits above overlay */
+}
+
+/* Subheader overlay */
+.subheader {
+  display: flex;                /* makes children horizontal */
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;                    /* spacing between items */
+
+  padding: 100px 32px;
+  border-radius: 12px;
+  color: #000000;
+  max-width: 800px;
+  width: 90%;
+  backdrop-filter: blur(6px);
+  z-index: 2;
+}
+
+.subheader h2 {
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding-left: 100px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 100px;
+  margin-top: -200px;
+}
+
+.range-label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #3d46cc;
+  text-align: right;
+  width: 250px;   /* match slider width */
+  padding-right: 120px;
+}
+
+#priceRange {
+  width: 250px;
 }
 
 

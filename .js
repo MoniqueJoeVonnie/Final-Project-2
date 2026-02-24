@@ -1,6 +1,6 @@
-  const toggle = document.getElementById("navToggle");
-  const links = document.getElementById("navLinks");
+const range = document.getElementById("priceRange");
+const value = document.getElementById("priceValue");
 
-  toggle.addEventListener("click", () => {
-    links.classList.toggle("active");
-  });
+range.addEventListener("input", () => {
+  value.textContent = range.value;
+});

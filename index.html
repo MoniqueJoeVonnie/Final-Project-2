@@ -7,35 +7,64 @@
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <section class="header">
-  <nav class="nav">
-    
-    <div class="nav__left">
-      <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-3.png" class="logo" alt="">
-    </div>
+    <body>
+        <section class="header">
+            <nav class="nav">
+                
+                <div class="nav__left">
+                    <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-3.png" class="logo" alt="">
+                </div>
 
 
-    <div class="nav__center">
-  <h1 class="nav__title">Discover Your Sound</h1>
+                <div class="nav__center">
+                <h1 class="nav__title">Discover Your Sound</h1>
 
-  <form action="search" method="get">
-    <input type="text" name="query" placeholder="Search by genre, artist, or producer...">
-  </form>
-</div>
+                    <form action="search" method="get" class="search-form">
+                        <div class="search-input-wrapper">
+                            <input 
+                                type="text" 
+                                name="query" 
+                                placeholder="Search by genre, artist, or producer..."
+                            >
+                            <button type="submit" class="search-btn">🎵</button>
+                        </div>
+                    </form>
+                </div>
 
-    <div class="nav__right">
-  <ul class="nav__links">
-    <li><a href="about">About</a></li>
-    <li><a href="services">Services</a></li>
-    <li><a href="contact" class="nav__btn">Contact</a></li>
-  </ul>
-</div>
 
-  </nav>
-</section>
+                <div class="nav__right">
+                    <ul class="nav__links">
+                        <li><a href="about">About</a></li>
+                        <li><a href="services">Services</a></li>
+                        <li><a href="contact" class="nav__btn">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+
+        <section class="subheader-section">
+            <div class="subheader">
+                <h2>Search Results:</h2>
+            </div>
+        </section>
+        <section class="content-section">
+            <div class="content-container price-filter">
+                <label for="priceRange" class="range-label">
+                Price Range: $<span id="priceValue">200</span>
+                </label>
+
+                <input 
+                type="range" 
+                id="priceRange" 
+                min="1" 
+                max="200" 
+                value="50" 
+                step="1"
+                >
+            </div>
+        </section>
         <style>
-        body {
+            body {
                 background-image: image-set(
                 url("/Assets/Lyrics_640\ x\ 464.jpg") 1x,
                 url("/Assets/Lyrics_1280\ x\ 929.jpeg") 2x,
@@ -74,25 +103,19 @@
                 }
             }
         </style>
-            
-    <section id="hero" class="hero">
-<main> 
-    <div class="row">      
-     
-</main>
-    </section>
-<footer id="footer" class="footer">
-    <div class="footer__overlay"></div>
-    <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-3.png" class="footer__logo-img" alt="">
-    <div class="footer__links">
-        <a class="footer__link" href="about">About</a>
-        <a class="footer__link" href="services">Services</a>
-        <a class="footer__link" href="policy">Policy</a>
-        <a class="footer__link" href="terms">Terms</a>
-        <a class="footer__link" href="faqs">Faqs</a>
-        <a class="footer__link" href="contact">Contact</a>
-    </div>
-    <p>Copyright © 2026 Music Code. All rights reserved.</p>
-</footer>
-</body>
+
+    <footer id="footer" class="footer">
+        <div class="footer__overlay"></div>
+        <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-3.png" class="footer__logo-img" alt="">
+        <div class="footer__links">
+            <a class="footer__link" href="about">About</a>
+            <a class="footer__link" href="services">Services</a>
+            <a class="footer__link" href="policy">Policy</a>
+            <a class="footer__link" href="terms">Terms</a>
+            <a class="footer__link" href="faqs">Faqs</a>
+            <a class="footer__link" href="contact">Contact</a>
+        </div>
+        <p>Copyright © 2026 Music Code. All rights reserved.</p>
+    </footer>
+    </body>
 </html>
