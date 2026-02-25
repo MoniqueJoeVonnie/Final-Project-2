@@ -15,6 +15,7 @@
                     <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-3.png" class="logo" alt="">
                 </div>
 
+                
 
                 <div class="nav__center">
                 <h1 class="nav__title">Discover Your Sound</h1>
@@ -42,27 +43,41 @@
             </nav>
         </section>
 
-        <section class="subheader-section">
-            <div class="subheader">
-                <h2>Search Results:</h2>
-            </div>
-        </section>
-        <section class="content-section">
-            <div class="content-container price-filter">
-                <label for="priceRange" class="range-label">
-                Price Range: $<span id="priceValue">0 to 100</span>
-                </label>
+        <div class="item-sorter">
+            <select id="filter">
+                <option value="" disabled selected>Sort</option>
+                <option value="LOW_TO_HIGH">Price, Low to High</option>
+                <option value="HIGH_TO_LOW">Price, High to Low</option>
+                <option value="RATING">Rating</option>
+            </select> 
 
-                <input 
-                type="range" 
-                id="priceRange" 
-                min="1" 
-                max="200" 
-                value="50" 
-                step="1"
-                >
-            </div>
-        </section>
+            <section class="content-section">
+                <div class="content-container price-filter">
+                    <label for="priceRange" class="range-label">
+                    Price Range: $<span id="priceValue">0 to 100</span>
+                    </label>
+
+                    <input 
+                    type="range" 
+                    id="priceRange" 
+                    min="1" 
+                    max="200" 
+                    value="50" 
+                    step="1"
+                    >
+                </div>
+            </section>
+
+        </div>
+
+        <div class="music-search-line-up">
+            <section class="subheader-section">
+                <div class="subheader">
+                    <h2>Search Results:</h2>
+                </div>     
+            </section>
+            
+        </div>
         <style>
             body {
                 background-image: image-set(

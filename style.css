@@ -201,35 +201,19 @@ main, header, section, footer {
   z-index: 1; /* ensures content sits above overlay */
 }
 
-/* Subheader overlay */
-.subheader {
-  display: flex;                /* makes children horizontal */
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;                    /* spacing between items */
-
-  padding: 100px 32px;
-  border-radius: 12px;
-  color: #000000;
-  max-width: 800px;
-  width: 90%;
-  backdrop-filter: blur(6px);
-  z-index: 2;
-}
-
 .subheader h2 {
   font-size: clamp(20px, 2.5vw, 28px);
   font-weight: 500;
   letter-spacing: 0.5px;
-  padding-left: 100px;
+  padding: 50px;
+  display: inline;
 }
 
 .content-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-right: 140px;
-  margin-top: -200px;
+  margin-top: 0px;
 }
 
 .range-label {
@@ -243,6 +227,18 @@ main, header, section, footer {
 
 #priceRange {
   width: 250px;
+  cursor: pointer;
+}
+
+.item-sorter {
+   display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 136px 0px 128px;
+}
+
+.music-search-line-up {
+  padding: 0px 0px 0px 72px;
 }
 
 
