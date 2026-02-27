@@ -231,7 +231,7 @@ main, header, section, footer {
 }
 
 .item-sorter {
-   display: flex;  
+  display: flex;  
   justify-content: space-between;
   align-items: center;
   padding: 100px 136px 0px 128px;
