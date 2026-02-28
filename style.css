@@ -268,19 +268,34 @@ body {
 
 .album__title {
   font-size: 16px;
-  color: #d56969;
+  color: #000000;
   margin-top: 4px;
+  font-style: italic;
 }
 
 .album__price {
-  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.album__price--normal {
+  text-decoration: line-through;
+  opacity: 0.45;
+}
+
+.album__price--sale {
+  font-weight: 700;
+  color: #c62828;   /* subtle sale red */
 }
 
 .album__ratings {
   margin-top: 6px;
   display: flex;
   gap: 4px;
-  font-size: 12.5px;
+  font-size: 11px;
   color: #f5c518;
 }
 
