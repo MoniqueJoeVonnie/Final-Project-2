@@ -201,13 +201,7 @@ main, header, section, footer {
   z-index: 1; /* ensures content sits above overlay */
 }
 
-.subheader h2 {
-  font-size: clamp(20px, 2.5vw, 28px);
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  padding: 50px;
-  display: inline;
-}
+
 
 .content-container {
   display: flex;
@@ -237,9 +231,35 @@ main, header, section, footer {
   padding: 100px 136px 0px 128px;
 }
 
-.music-search-line-up {
-  padding: 0px 0px 0px 72px;
+
+.select {
+  cursor: pointer;
 }
+
+*/
+Albums
+*/
+
+body {
+  margin: 0;
+  position: relative; /* establishes positioning context */
+}
+
+.hiphop-album {
+  position: absolute;
+  top: 200px;     /* adjust as needed */
+  left: 15%;
+  transform: translateX(-50%); /* perfect horizontal centering */
+  z-index: 2;     /* ensures it sits above background */
+}
+
+.hiphop__img {
+  width: 280px;   /* control size */
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
 
 
 
