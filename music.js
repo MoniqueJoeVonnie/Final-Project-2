@@ -1,6 +1,39 @@
+// SORT / FILTER FUNCTION
+function filterMusic(music) {
+  const filterElement = document.querySelector("#filter");
+  if (!filterElement) return music;
+
+  const filterValue = filterElement.value;
+
+  // copy array so original data is untouched
+  let sortedMusic = [...music];
+
+  if (filterValue === "LOW_TO_HIGH") {
+    sortedMusic.sort((a, b) => a.salePrice - b.salePrice);
+  }
+
+  if (filterValue === "HIGH_TO_LOW") {
+    sortedMusic.sort((a, b) => b.salePrice - a.salePrice);
+  }
+
+  if (filterValue === "RATING") {
+    sortedMusic.sort((a, b) => b.rating - a.rating);
+  }
+
+  return sortedMusic;
+}
+
+
+// RENDER FUNCTION
 function rendermusic() {
   const musicWrapper = document.querySelector("#musicContainer");
-  const music = getmusic();
+
+  if (!musicWrapper) return;
+
+  let music = getmusic();
+
+  // apply sorting
+  music = filterMusic(music);
 
   const musicHTML = music.map((album) => {
     return `
@@ -28,8 +61,18 @@ function rendermusic() {
   musicWrapper.innerHTML = musicHTML;
 }
 
-setTimeout(() => {
+
+// WAIT UNTIL PAGE LOADS
+document.addEventListener("DOMContentLoaded", () => {
+
   rendermusic();
+
+  const filterElement = document.querySelector("#filter");
+
+  filterElement.addEventListener("change", () => {
+    rendermusic();
+  });
+
 });
 // FAKE DATA
 function getmusic() {
@@ -90,9 +133,18 @@ function getmusic() {
     },
     {
     albumId: 1,
+    id: "Schoolboy Q",
+    title: "Oxymoron",
+    url: "/Assets/HipHopRap/Schoolboy Q_Oxymoron.jpeg",
+    originalPrice: 50.98,
+    salePrice: 39.99,
+    rating: 5.0
+    },
+    {
+    albumId: 1,
     id: "Nicki Minaj",
     title: "Pink Friday",
-    url: "/Assets/HipHopRap/Nicki Minaj_Pink Friday .jpeg.jpeg",
+    url: "/Assets/HipHopRap/Nicki Minaj_Pink Friday .jpeg",
     originalPrice: 59.98,
     salePrice: 37.99,
     rating: 4.5
@@ -101,7 +153,7 @@ function getmusic() {
     albumId: 1,
     id: "Remy Ma",
     title: "There's Something About Remy",
-    url: "/Assets/HipHopRap/Remy Ma_There's Something About Remy.jpeg.jpeg",
+    url: "/Assets/HipHopRap/Remy Ma_There's Something About Remy.jpeg",
     originalPrice: 35.00,
     salePrice: 25.00,
     rating: 4.5
@@ -135,12 +187,21 @@ function getmusic() {
     },
     {
     albumId: 1,
-    id: "T.I.",
+    id: "A$AP Rocky",
     title: "LONG.LIVE.A$AP",
     url: "/Assets/HipHopRap/A$AP Rocky_Long.Live.ASAP.jpeg",
     originalPrice: 45.00,
     salePrice: 37.99,
     rating: 5.0
+    },
+    {
+    albumId: 1,
+    id: "Eve",
+    title: "Let There Be Eve...Ruff Ryders' First Lady",
+    url: "/Assets/HipHopRap/Eve_Let There Be Eve...Ruff Ryders' First Lady.jpeg",
+    originalPrice: 17.00,
+    salePrice: 14.99,
+    rating: 3.5
     },
     {
     albumId: 1,
@@ -150,6 +211,15 @@ function getmusic() {
     originalPrice: 36.00,
     salePrice: 26.00,
     rating: 5.0
+    },
+    {
+    albumId: 1,
+    id: "Old Dirty Bastard",
+    title: "Return to the 36 Chambers:The Dirty Version",
+    url: "/Assets/HipHopRap/Old Dirty Bastard_Return to the 36 Chambers - The Dirty Version.jpeg",
+    originalPrice: 55.99,
+    salePrice: 42.98,
+    rating: 4.5
     },
     {
     albumId: 1,
