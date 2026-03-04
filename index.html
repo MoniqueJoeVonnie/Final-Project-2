@@ -5,142 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Code</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="music.js"></script>
+    <script src="https://kit.fontawesome.com/ae8380df12.js" crossorigin="anonymous"></script>
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 </head>
     <body>
-        <section class="header">
-            <nav class="nav">
-                
-                <div class="nav__left">
-                    <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-3.png" class="logo" alt="">
-                </div>
+       
+        
+            <!-- 1️⃣ HEADER / NAV -->
+            <section class="header">
+                <nav class="nav">
+                    
+                    <div class="nav__left">
+                        <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-3.png" class="logo" alt="">
+                    </div>
 
-                
+                    
 
-                <div class="nav__center">
-                <h1 class="nav__title">Discover Your Sound</h1>
+                    <div class="nav__center">
+                    <h1 class="nav__title">Discover Your Sound</h1>
 
-                    <form action="search" method="get" class="search-form">
-                        <div class="search-input-wrapper">
-                            <input 
-                                type="text" 
-                                name="query" 
-                                placeholder="Search by genre, artist, or producer..."
-                            >
-                            <button type="submit" class="search-btn">🎵</button>
-                        </div>
-                    </form>
-                </div>
+                        <form action="search" method="get" class="search-form">
+                            <div class="search-input-wrapper">
+                                <input 
+                                    type="text" 
+                                    name="query" 
+                                    placeholder="Search by genre, artist, or producer..."
+                                >
+                                <button type="submit" class="search-btn">🎵</button>
+                            </div>
+                        </form>
+                    </div>
 
 
-                <div class="nav__right">
-                    <ul class="nav__links">
-                        <li><a href="about">About</a></li>
-                        <li><a href="services">Services</a></li>
-                        <li><a href="contact" class="nav__btn">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </section>
+                    <div class="nav__right">
+                        <ul class="nav__links">
+                            <li><a href="about">About</a></li>
+                            <li><a href="services">Services</a></li>
+                            <li><a href="contact" class="nav__btn">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </section>
 
-        <div class="item-sorter">
-            <select id="filter">
-                <option value="" disabled selected>Sort</option>
-                <option value="LOW_TO_HIGH">Price, Low to High</option>
-                <option value="HIGH_TO_LOW">Price, High to Low</option>
-                <option value="RATING">Rating</option>
-            </select> 
+            <!-- 2️⃣ SORT + SLIDER -->
+            <div class="item-sorter">
+                <select id="filter">
+                    <option value="" disabled selected>Sort</option>
+                    <option value="LOW_TO_HIGH">Price, Low to High</option>
+                    <option value="HIGH_TO_LOW">Price, High to Low</option>
+                    <option value="RATING">Rating</option>
+                </select> 
 
-            <section class="content-section">
-                <div class="content-container price-filter">
-                    <label for="priceRange" class="range-label">
-                    Price Range: $<span id="priceValue">0 to 100</span>
-                    </label>
+                <section class="content-section">
+                    <div class="content-container price-filter">
+                        <label for="priceRange" class="range-label">
+                        Price Range: $<span id="priceValue">0 to 100</span>
+                        </label>
 
-                    <input 
-                    type="range" 
-                    id="priceRange" 
-                    min="1" 
-                    max="200" 
-                    value="50" 
-                    step="1"
-                    >
+                        <input 
+                        type="range" 
+                        id="priceRange" 
+                        min="1" 
+                        max="200" 
+                        value="50" 
+                        step="1"
+                        >
+                    </div>
+                </section>
+            </div>
+            <div class="music"></div>
+
+            <!-- 3️⃣ ALBUM GRID -->
+             
+             <main id="music__main">
+            <section class="music">
+                <div class="music__container" id="musicContainer">
+                    <!-- JavaScript will inject album items here -->
                 </div>
             </section>
-        </div>
 
-        <div class="hiphop-album">
-            <figure class="hiphop__img--wrapper">
-                <img class="hiphop__img" src="/Assets/HipHopRap/Drake_Scorpion.jpeg" alt="Scorpion album cover">
-            </figure>
 
-        <div class="album__artist">
-            Drake
-        </div>
+        
 
-       <div class="album__title">
-            <em>Scorpion</em>
-       </div>
 
-        <!-- ⭐ Ratings moved directly under album title -->
-        <div class="album__ratings">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-        </div>
 
-        <div class="album__price">
-            <span class="album__price--normal">$55.00</span>
-            <span class="album__price--sale">$37.99</span>
-        </div>
-        </div>
 
-        <style>
-            body {
-                background-image: image-set(
-                url("/Assets/Lyrics_640\ x\ 464.jpg") 1x,
-                url("/Assets/Lyrics_1280\ x\ 929.jpeg") 2x,
-                url("/Assets/Lyrics_1920\ x\ 1394.jpeg") 3x
-                );
-                background-size: cover;
-                background-attachment: fixed;
-            }
 
-            /* Tablet and below */
-            @media (max-width: 768px) {
+
+
+
+
+
+            <style>
                 body {
-                background-position: center top;
+                    background-image: image-set(
+                    url("/Assets/Lyrics_640\ x\ 464.jpg") 1x,
+                    url("/Assets/Lyrics_1280\ x\ 929.jpeg") 2x,
+                    url("/Assets/Lyrics_1920\ x\ 1394.jpeg") 3x
+                    );
+                    background-size: cover;
+                    background-attachment: fixed;
                 }
-            }
 
-            /* 640px */
-            @media (max-width: 640px) {
+                /* Tablet and below */
+                @media (max-width: 768px) {
+                    body {
+                    background-position: center top;
+                    }
+                }
+
+                /* 640px */
+                @media (max-width: 640px) {
+                    body {
+                    background-position: 50% 20%;
+                    background-size: cover;
+                    }
+                }
+
+                @media (max-width: 550px) {
                 body {
-                background-position: 50% 20%;
-                background-size: cover;
+                    background-position: 50% 15%;
+                    }
                 }
-            }
 
-            @media (max-width: 550px) {
-            body {
-                background-position: 50% 15%;
+                /* Small devices */
+                @media (max-width: 480px) {
+                    body {
+                    /* still uses image-set, but bias positioning for mobile */
+                    background-position: 50% 10%;
+                    }
                 }
-            }
+            </style>
+        </main>
 
-            /* Small devices */
-            @media (max-width: 480px) {
-                body {
-                /* still uses image-set, but bias positioning for mobile */
-                background-position: 50% 10%;
-                }
-            }
-        </style>
 
     <footer id="footer" class="footer">
         <div class="footer__overlay"></div>

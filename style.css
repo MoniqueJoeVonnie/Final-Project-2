@@ -22,9 +22,13 @@ html, body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 5;
 }
 
 .nav {
+  position: relative;
+  z-index: 6;
   display: flex;
   height: 200px;
   padding: 16px 16px 0 16px;              /* top + side padding */
@@ -245,12 +249,20 @@ body {
   position: relative; /* establishes positioning context */
 }
 
+.music__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 120px auto 80px auto;
+  padding: 0 60px;
+}
+
 .hiphop-album {
-  position: absolute;
-  top: 400px;     /* adjust as needed */
-  left: 18%;
-  transform: translateX(-50%); /* perfect horizontal centering */
-  z-index: 2;     /* ensures it sits above background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .hiphop__img {
