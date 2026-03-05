@@ -1,3 +1,63 @@
+function renderStars(rating) {
+  let stars = "";
+
+  for (let i = 1; i <= 5; i++) {
+    if (rating >= i) {
+      stars += `<i class="fas fa-star"></i>`;
+    } 
+    else if (rating >= i - 0.5) {
+      stars += `<i class="fas fa-star-half-alt"></i>`;
+    } 
+    else {
+      stars += `<i class="far fa-star"></i>`;
+    }
+  }
+
+  return stars;
+}
+
+function filterBySearch(music) {
+  const searchInput = document.querySelector("#searchInput");
+
+  if (!searchInput) return music;
+
+  const query = searchInput.value.toLowerCase().trim();
+
+  if (!query) return music;
+
+  return music.filter(album => {
+
+    const artist = album.id.toLowerCase();
+    const title = album.title.toLowerCase();
+
+    const genres = {
+      1: "hip hop",
+      2: "r&b",
+      3: "pop",
+      4: "rock"
+    };
+
+    const genre = genres[album.albumId];
+
+    return (
+      artist.includes(query) ||
+      title.includes(query) ||
+      genre.includes(query)
+    );
+  });
+}
+
+
+function filterByPrice(music) {
+  const priceSlider = document.querySelector("#priceRange");
+
+  if (!priceSlider) return music;
+
+  const maxPrice = Number(priceSlider.value);
+
+  return music.filter(album => album.salePrice <= maxPrice);
+}
+
 // SORT / FILTER FUNCTION
 function filterMusic(music) {
   const filterElement = document.querySelector("#filter");
@@ -27,12 +87,12 @@ function filterMusic(music) {
 // RENDER FUNCTION
 function rendermusic() {
   const musicWrapper = document.querySelector("#musicContainer");
-
   if (!musicWrapper) return;
 
   let music = getmusic();
 
-  // apply sorting
+  music = filterBySearch(music);
+  music = filterByPrice(music);
   music = filterMusic(music);
 
   const musicHTML = music.map((album) => {
@@ -50,6 +110,10 @@ function rendermusic() {
           <em>${album.title}</em>
         </div>
 
+        <div class="album__ratings">
+          ${renderStars(album.rating)}
+        </div>
+
         <div class="album__price">
           <span class="album__price--normal">$${album.originalPrice}</span>
           <span class="album__price--sale">$${album.salePrice}</span>
@@ -61,15 +125,35 @@ function rendermusic() {
   musicWrapper.innerHTML = musicHTML;
 }
 
-
-// WAIT UNTIL PAGE LOADS
 document.addEventListener("DOMContentLoaded", () => {
+
+  const filterElement = document.querySelector("#filter");
+  const priceSlider = document.querySelector("#priceRange");
+  const priceValue = document.querySelector("#priceValue");
+  const searchForm = document.querySelector("#searchForm");
+  const searchInput = document.querySelector("#searchInput");
 
   rendermusic();
 
-  const filterElement = document.querySelector("#filter");
+  // SEARCH SUBMIT
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    rendermusic();
+  });
 
+  // SEARCH WHILE TYPING
+  searchInput.addEventListener("input", () => {
+    rendermusic();
+  });
+
+  // SORT
   filterElement.addEventListener("change", () => {
+    rendermusic();
+  });
+
+  // PRICE FILTER
+  priceSlider.addEventListener("input", () => {
+    priceValue.textContent = `0 to ${priceSlider.value}`;
     rendermusic();
   });
 
@@ -118,7 +202,7 @@ function getmusic() {
     id: "Tupac",
     title: "All Eyez on Me",
     url: "/Assets/HipHopRap/Tupac_All Eyez on Me.jpeg",
-    originalPrice: 95.00,
+    originalPrice: 99.99,
     salePrice: 80.00,
     rating: 5.0
     },
@@ -139,6 +223,15 @@ function getmusic() {
     originalPrice: 50.98,
     salePrice: 39.99,
     rating: 5.0
+    },
+    {
+    albumId: 1,
+    id: "Kanye West",
+    title: "Yeezus",
+    url: "/Assets/HipHopRap/Kanye West_Yeezus.png",
+    originalPrice: 65.00,
+    salePrice: 52.00,
+    rating: 4.5
     },
     {
     albumId: 1,
@@ -219,6 +312,15 @@ function getmusic() {
     url: "/Assets/HipHopRap/Old Dirty Bastard_Return to the 36 Chambers - The Dirty Version.jpeg",
     originalPrice: 55.99,
     salePrice: 42.98,
+    rating: 4.5
+    },
+    {
+    albumId: 1,
+    id: "Eric B. & Rakim",
+    title: "Paid in Full",
+    url: "/Assets/HipHopRap/Eric B. & Rakim_Paid in Full.jpeg",
+    originalPrice: 39.99,
+    salePrice: 32.95,
     rating: 4.5
     },
     {
@@ -439,15 +541,6 @@ function getmusic() {
     },
     {
     albumId: 2,
-    id: "SZA",
-    title: "SOS Deluxe: Lana",
-    url: "/Assets/R&B/SZA_Lana (SOS_Deluxe).png",
-    originalPrice: 89.99,
-    salePrice: 79.99,
-    rating: 4.5
-    },
-    {
-    albumId: 2,
     id: "Tory Lanez",
     title: "Sorry 4 What",
     url: "/Assets/R&B/Tory Lanez_Sorry 4 What.jpeg",
@@ -633,15 +726,6 @@ function getmusic() {
     url: "/Assets/Rock&Roll/Red Hot Chili Peppers_Californication.jpeg",
     originalPrice: 45.00,
     salePrice: 36.00,
-    rating: 5.0
-    },
-    {
-    albumId: 4,
-    id: "Aerosmith",
-    title: "Get a Grip",
-    url: "/Assets/Rock&Roll/Aerosmith_Get A Grip.jpeg",
-    originalPrice: 63.00,
-    salePrice: 50.00,
     rating: 5.0
     },
     {
