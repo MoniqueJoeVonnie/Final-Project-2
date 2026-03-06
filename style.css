@@ -94,6 +94,11 @@ html, body {
 
 
 
+/* About and Services hover effect */
+.nav__links a:not(.nav__btn):hover {
+  color: #dbff3b;
+  transition: color 0.3s ease-out; /* applies ease-out when hovering in and out */
+}
 
 input[type="text"] {
   width: 150%;                 /* not 200% */
@@ -413,7 +418,7 @@ Footer
   text-decoration: none;
   color: white;
   font-size: 14px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-out; /* applies ease-out when hovering in and out */
 }
 
 .footer__links a:hover {
