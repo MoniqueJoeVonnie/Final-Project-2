@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Code</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="music.js"></script>
+    <script src="music.js" defer></script>
     <script src="https://kit.fontawesome.com/ae8380df12.js" crossorigin="anonymous"></script>
     <link
     rel="stylesheet"
@@ -28,17 +28,16 @@
                     <div class="nav__center">
                     <h1 class="nav__title">Discover Your Sound</h1>
 
-                        <form action="search" method="get" class="search-form">
+                        <form class="search-form" id="searchForm">
                             <div class="search-input-wrapper">
                                 <input 
-                                    type="text" 
-                                    name="query" 
-                                    placeholder="Search by genre, artist, or producer..."
+                                type="text"
+                                id="searchInput"
+                                placeholder="Search by genre, artist, or album..."
                                 >
                                 <button type="submit" class="search-btn">🎵</button>
                             </div>
                         </form>
-                    </div>
 
 
                     <div class="nav__right">
@@ -143,18 +142,31 @@
         </main>
 
 
-    <footer id="footer" class="footer">
-        <div class="footer__overlay"></div>
-        <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-3.png" class="footer__logo-img" alt="">
-        <div class="footer__links">
-            <a class="footer__link" href="about">About</a>
-            <a class="footer__link" href="services">Services</a>
-            <a class="footer__link" href="policy">Policy</a>
-            <a class="footer__link" href="terms">Terms</a>
-            <a class="footer__link" href="faqs">Faqs</a>
-            <a class="footer__link" href="contact">Contact</a>
-        </div>
-        <p>Copyright © 2026 Music Code. All rights reserved.</p>
-    </footer>
+<footer class="footer">
+
+  <img src="/Assets/flutie8211-grunge-8673797_1280.jpg" class="footer__background-img" alt="">
+
+  <div class="footer__content">
+
+      <img src="/Assets/FINAL PROJECT 2 LOGO (MUSIC CODE)-3.png" class="footer__logo" alt="Music Code Logo">
+
+      <ul class="footer__links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Policy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+
+      <p class="footer__text">
+        © 2026 Music Code. All Rights Reserved.
+      </p>
+
+  </div>
+
+  <img src="/Assets/footer-image.png" class="footer__bottom-img" alt="">
+
+</footer>
     </body>
 </html>
