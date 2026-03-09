@@ -62,15 +62,15 @@
                 <section class="content-section">
                     <div class="content-container price-filter">
                         <label for="priceRange" class="range-label">
-                        Price Range: $<span id="priceValue">0 to 100</span>
+                        Price Range: $<span id="priceValue">0 to 80</span>
                         </label>
 
                         <input 
                         type="range" 
                         id="priceRange" 
-                        min="1" 
-                        max="100" 
-                        value="50" 
+                        min="0" 
+                        max="80" 
+                        value="10" 
                         step="1"
                         >
                     </div>   
@@ -83,8 +83,19 @@
              <main id="music__main">
             <section class="music">
                 <div class="music__container" id="musicContainer">
-                    <!-- JavaScript will inject album items here -->
+
+                    <div class="hiphop-album">
+                        <img 
+                            class="hiphop__img"
+                            src="https://via.placeholder.com/300x300?text=Music"
+                            alt="Music Placeholder"
+                        >
+
+                        <div class="album__artist">Artist</div>
+                        <div class="album__title">Recommended Artist</div>
+                    </div>
                 </div>
+
             </section>
 
 
