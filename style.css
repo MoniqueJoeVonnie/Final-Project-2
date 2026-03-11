@@ -186,15 +186,11 @@ row {
   justify-content: center;
 }
 
-
-
 /*
 
 Main Section Search Music
 
 */
-
-
 
 body::before {
   content: "";
@@ -240,14 +236,11 @@ main, header, section, footer {
   padding: 100px 136px 0px 128px;
 }
 
-
 .select {
   cursor: pointer;
 }
 
-*/
-Albums
-*/
+/* Albums */
 
 body {
   margin: 0;
@@ -427,6 +420,689 @@ Footer
 
 
 
+
+
+
+
+
+
+
+
+
+/* placeholder for 728px breakpoint */
+@media (max-width: 728px) {
+
+  html {
+    font-size: 15px;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .header {
+    background-position: center top;
+  }
+
+  .nav {
+    height: 170px;
+    padding: 14px 14px 0 14px;
+  }
+
+
+
+
+  .nav__left {
+    align-items: center;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+
+
+
+  .nav__center {
+    padding-bottom: 20px;
+    justify-content: center;
+  }
+
+  .nav__title {
+    font-size: 28px;
+    margin-bottom: 7px;
+  }
+
+  .nav__center form {
+    max-width: 520px;
+    gap: 10px;
+  }
+
+
+
+
+  .nav__right {
+    align-items: center;
+  }
+
+  .nav__links {
+    gap: 16px;
+    padding-top: 6%;
+  }
+
+
+
+
+  /* About and Services hover effect */
+  .nav__links a:not(.nav__btn):hover {
+    transition: color 0.25s ease-out;
+  }
+
+  input[type="text"] {
+    width: 130%;
+    font-size: 18px;
+    padding: 5px 14px;
+  }
+
+   a {
+    font-size: 15px;
+  }
+
+  .nav__btn {
+    padding: 7px 16px;
+    font-size: 15px;
+  }
+
+  .nav__btn:hover {
+    background-color: rgb(245, 0, 0);
+  }
+
+  .search-input-wrapper {
+    max-width: 520px;
+  }
+
+  .search-btn {
+    right: 10px;
+    font-size: 17px;
+  }
+
+  .search-btn:hover {
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .search-input-wrapper:has(input:focus),
+  .search-input-wrapper:has(input:not(:placeholder-shown)) .search-btn {
+    color: #ff0033;
+  }
+
+  .search-input-wrapper input:focus {
+    border-color: #ff0033;
+    box-shadow: 0 0 8px rgba(255,0,51,0.3);
+    font-size: 18px;
+  }
+
+  .row {
+    max-width: 680px;
+    padding: 0 20px;
+  }
+
+/*
+
+Main Section Search Music
+
+*/
+
+body::before {
+    background: rgba(255, 255, 255, 0.80);
+  }
+
+  main,
+  header,
+  section,
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .content-container {
+    align-items: flex-end;
+    margin-top: 10px;
+  }
+
+  .range-label {
+    width: 240px;
+    padding-right: 70px;
+    font-size: 15px;
+  }
+
+   #priceRange {
+    width: 230px;
+  }
+
+  .item-sorter {
+    padding: 80px 80px 0 80px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* placeholder for 640px breakpoint */
+@media (max-width: 640px) {
+
+  html {
+    font-size: 14.5px;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .header {
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .nav {
+    height: 150px;
+    padding: 12px 12px 0 12px;
+  }
+
+
+
+
+  .nav__left {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+
+
+
+  .nav__center {
+    padding-bottom: 16px;
+    justify-content: center;
+  }
+
+  .nav__title {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .nav__center form {
+    max-width: 460px;
+    gap: 9px;
+  }
+
+
+
+
+  .nav__right {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav__links {
+    gap: 14px;
+    padding-top: 5%;
+  }
+
+
+
+
+  /* About and Services hover effect */
+  .nav__links a:not(.nav__btn):hover {
+    transition: color 0.2s ease-out;
+  }
+
+  input[type="text"] {
+    width: 115%;
+    font-size: 17px;
+    padding: 5px 12px;
+  }
+
+  a {
+    font-size: 14.5px;
+  }
+
+  .nav__btn {
+    padding: 7px 14px;
+    font-size: 14.5px;
+  }
+
+  .nav__btn:hover {
+    background-color: rgb(235, 0, 0);
+  }
+
+  .search-input-wrapper {
+    max-width: 460px;
+  }
+
+  .search-btn {
+    right: 9px;
+    font-size: 16px;
+  }
+
+  .search-btn:hover {
+    transform: translateY(-50%) scale(1.03);
+  }
+
+  .search-input-wrapper:has(input:focus),
+  .search-input-wrapper:has(input:not(:placeholder-shown)) .search-btn {
+    color: #ff0033;
+  }
+
+  .search-input-wrapper input:focus {
+    border-color: #ff0033;
+    box-shadow: 0 0 6px rgba(255,0,51,0.3);
+    font-size: 17px;
+  }
+
+  .row {
+    max-width: 600px;
+    padding: 0 18px;
+  }
+
+/*
+
+Main Section Search Music
+
+*/
+
+body::before {
+    background: rgba(255, 255, 255, 0.75);
+  }
+
+  main,
+  header,
+  section,
+  footer {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .range-label {
+    width: 220px;
+    padding-right: 50px;
+    font-size: 15px;
+  }
+
+   #priceRange {
+    width: 210px;
+  }
+
+  .item-sorter {
+    padding: 70px 50px 0 50px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* placeholder for 550px breakpoint */
+@media (max-width: 550px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .header {
+    background-position: center;
+  }
+
+  .nav {
+    height: 130px;
+    padding: 10px 10px 0 10px;
+  }
+
+
+
+
+  .nav__left {
+    flex: 0.8;
+    align-items: center;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+
+
+
+  .nav__center {
+    padding-bottom: 12px;
+    justify-content: center;
+  }
+
+  .nav__title {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .nav__center form {
+    max-width: 460px;
+    gap: 9px;
+  }
+
+
+
+
+  .nav__right {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav__links {
+    gap: 12px;
+    padding-top: 4%;
+  }
+
+
+
+
+  /* About and Services hover effect */
+  .nav__links a:not(.nav__btn):hover {
+    transition: color 0.18s ease-out;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+
+  .nav__btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .nav__btn:hover {
+    background-color: rgb(225, 0, 0);
+  }
+
+  .search-input-wrapper {
+    max-width: 400px;
+  }
+
+  .search-btn {
+    right: 8px;
+    font-size: 15px;
+  }
+
+  .search-btn:hover {
+    transform: translateY(-50%) scale(1.02);
+  }
+
+  .search-input-wrapper:has(input:focus),
+  .search-input-wrapper:has(input:not(:placeholder-shown)) .search-btn {
+    color: #ff0033;
+  }
+
+  .search-input-wrapper input:focus {
+    border-color: #ff0033;
+    box-shadow: 0 0 5px rgba(255,0,51,0.3);
+    font-size: 16px;
+  }
+
+  .row {
+    max-width: 520px;
+    padding: 0 16px;
+    flex-direction: column;
+  }
+
+/*
+
+Main Section Search Music
+
+*/
+body::before {
+    background: rgba(255, 255, 255, 0.70);
+  }
+
+main,
+  header,
+  section,
+  footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .content-container {
+    align-items: center;
+    width: 100%;
+    margin-top: 14px;
+  }
+
+  .range-label {
+    width: 200px;
+    padding-right: 30px;
+    text-align: center;
+  }
+
+  #priceRange {
+    width: 190px;
+  }
+
+  .item-sorter {
+    padding: 60px 30px 0 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* placeholder for 480px breakpoint */
+@media (max-width: 480px) {
+
+   html {
+    font-size: 13.5px;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .header {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .nav {
+    height: 110px;
+    padding: 8px 8px 0 8px;
+  }
+
+
+
+
+  .nav__left {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+
+
+
+  .nav__center {
+    padding-bottom: 8px;
+    justify-content: center;
+  }
+  .nav__title {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .nav__center form {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 8px;
+  }
+
+
+
+
+  .nav__right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav__links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 3%;
+  }
+
+
+
+
+  /* About and Services hover effect */
+  .nav__links a:not(.nav__btn):hover {
+    transition: color 0.15s ease-out;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+
+  a {
+    font-size: 13.5px;
+  }
+
+  .nav__btn {
+    padding: 6px 10px;
+    font-size: 13.5px;
+  }
+
+  .nav__btn:hover {
+    background-color: rgb(215, 0, 0);
+  }
+
+  .search-input-wrapper {
+    max-width: 100%;
+    padding: 0 8px; /* prevents touching screen edges */
+  }
+
+  .search-btn {
+    right: 6px;
+    font-size: 14px;
+  }
+
+  .search-btn:hover {
+    transform: translateY(-50%) scale(1);
+  }
+
+  .search-input-wrapper:has(input:focus),
+  .search-input-wrapper:has(input:not(:placeholder-shown)) .search-btn {
+    color: #ff0033;
+  }
+
+  .search-input-wrapper input:focus {
+    border-color: #ff0033;
+    box-shadow: 0 0 5px rgba(255,0,51,0.3);
+    font-size: 16px;
+  }
+
+  .row {
+    max-width: 100%;
+    padding: 0 14px;
+  }
+
+/*
+
+Main Section Search Music
+
+*/
+
+body::before {
+    background: rgba(255, 255, 255, 0.65);
+  }
+
+main,
+  header,
+  section,
+  footer {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .content-container {
+    align-items: stretch;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .range-label {
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+    font-size: 14px;
+  }
+
+   #priceRange {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .item-sorter {
+    padding: 50px 20px 0 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+}
 
 
 
