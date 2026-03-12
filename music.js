@@ -27,6 +27,10 @@ const sortFilter = document.querySelector("#filter");
 const priceRange = document.querySelector("#priceRange");
 const priceValue = document.querySelector("#priceValue");
 
+/* Mobile Navigation */
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
 /* =========================
    GENRE NORMALIZATION
 ========================= */
@@ -90,6 +94,8 @@ async function fetchMusic(query){
 function filterByPrice(albums){
   return albums.filter(album => album.price <= state.maxPrice);
 }
+
+
 
 /* =========================
    SORT MUSIC
@@ -247,6 +253,16 @@ priceRange.addEventListener("input",()=>{
   renderMusic(filtered);
 
 });
+
+/* =========================
+   HAMBURGER MENU
+========================= */
+
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
 
 /* =========================
    INITIAL LOAD

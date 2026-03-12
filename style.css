@@ -102,6 +102,22 @@ html, body {
   transition: color 0.3s ease-out; /* applies ease-out when hovering in and out */
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 20;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
 input[type="text"] {
   width: 150%;                 /* not 200% */
   padding: 5px 16px;
@@ -503,6 +519,28 @@ Footer
     transition: color 0.25s ease-out;
   }
 
+  .hamburger {
+    display: flex;
+  }
+
+  .nav__links {
+    position: absolute;
+    top: 170px;
+    right: 0;
+    width: 220px;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav__links.active {
+    transform: translateX(0);
+  }
+
   input[type="text"] {
     width: 130%;
     font-size: 18px;
@@ -774,6 +812,11 @@ Footer
     transition: color 0.2s ease-out;
   }
 
+  .nav__links {
+    top: 150px;
+    width: 200px;
+  }
+
   input[type="text"] {
     width: 115%;
     font-size: 17px;
@@ -1032,6 +1075,11 @@ Footer
   /* About and Services hover effect */
   .nav__links a:not(.nav__btn):hover {
     transition: color 0.18s ease-out;
+  }
+
+  .nav__links {
+    top: 130px;
+    width: 180px;
   }
 
   input[type="text"] {
@@ -1329,6 +1377,12 @@ Footer
   /* About and Services hover effect */
   .nav__links a:not(.nav__btn):hover {
     transition: color 0.15s ease-out;
+  }
+
+  .nav__links {
+    top: 110px;
+    width: 100%;
+    right: 0;
   }
 
   input[type="text"] {
