@@ -95,8 +95,6 @@ function filterByPrice(albums){
   return albums.filter(album => album.price <= state.maxPrice);
 }
 
-
-
 /* =========================
    SORT MUSIC
 ========================= */
@@ -253,16 +251,6 @@ priceRange.addEventListener("input",()=>{
   renderMusic(filtered);
 
 });
-
-/* =========================
-   HAMBURGER MENU
-========================= */
-
-if (hamburger && navLinks) {
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-}
 
 /* =========================
    INITIAL LOAD
