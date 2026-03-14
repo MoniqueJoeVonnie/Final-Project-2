@@ -20,7 +20,7 @@ html, body {
 .header {
   width: 100%;
   min-height: 200px;
-  background-image: url("/Assets/eslam-m0-letters-8237667_1280.jpg");
+  background-image: url("./Assets/eslam-m0-letters-8237667_1280.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
