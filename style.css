@@ -283,6 +283,13 @@ main, header, section, footer {
   padding: 100px 136px 0px 128px;
 }
 
+.item-sorter select:focus,
+.item-sorter input:focus {
+  outline: none;
+  border-color: #ff0033;
+  box-shadow: 0 0 10px rgba(255, 0, 51, 0.35);
+}
+
 .select {
   cursor: pointer;
 }
